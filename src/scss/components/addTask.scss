@@ -1,0 +1,117 @@
+.add-task,
+.add-time {
+  .task-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .decor {
+      svg {
+        fill: $btn-success;
+      }
+      &:hover svg{
+        fill: darken($btn-success, 5%)
+      }
+    }
+    
+  }
+  .block-title {
+    padding: 0 10px;
+  }
+  .add-form {
+    position: relative;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    input {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 20px;
+      background: rgba($btn-bg, 0.8);
+      border: 1px solid transparent;
+      color: $btn-border;
+      margin: 10px 0;
+      transition: border 300ms;
+      &.warning {
+        border: 1px solid $warning-color;
+      }
+      &.submit {
+        background: rgba($btn-success, .55);
+        color: $btn-success;
+        cursor: pointer;
+        transition: background 300ms;
+        &:hover {
+        background: rgba(darken($btn-success, 5%), .5);
+        }
+        &:focus {
+          border: 1px solid transparent;
+        }
+      }
+      &:focus {
+        border: 1px solid $btn-border;
+      }
+    }
+    .read-input {
+      width: 48%;
+      cursor: default;
+      &.change {
+        text-align: left;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.change-clock {
+  margin: 20px 0 0 0;
+  background: $bg-color;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 300px;
+
+  ul {
+    width: 45%;
+    list-style-type: none;
+    overflow-y: auto;
+    text-align: center;
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+
+    li {
+      color: #fff;
+      padding: 5px 0;
+      font-size: 40px;
+      cursor: pointer;
+      span {
+        border-bottom: 1px solid $btn-bg;
+        transition: color 300ms;
+        &.current {
+          color: $btn-success;
+        }
+      }
+    }
+  }
+
+  .add-clock {
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    span {
+      font-size: 100px;
+      align-self: center;
+      background: none;
+    }
+    .current {
+      font-size: 30px;
+    }
+  }
+}

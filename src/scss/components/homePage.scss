@@ -1,0 +1,127 @@
+.home {
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-progress {
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    .circle-wrap {
+      position: relative;
+    }
+    &-wrap {
+      span {
+        display: block;
+      }
+      .progress-gap {
+        padding: 0 10px;
+        color: $btn-border;
+        @media screen and(max-width: 480px) {
+          padding: 0 30px;
+        }
+        @media screen and(max-width: 320px) {
+          padding: 0 50px 10px 50px;
+        }
+      }
+      .progress-count {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        letter-spacing: 1px;
+      }
+    }
+    .details {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: $block-bg;
+      padding: 20px 0;
+      overflow: hidden;
+      cursor: pointer;
+      @media screen and(max-width: 480px) {
+        .svg-wrap {
+          transform: scale(0.85);
+        }
+      }
+      @media screen and(max-width: 320px) {
+        padding: 0;
+        .svg-wrap {
+          transform: scale(0.6);
+        }
+      }
+      .svg-wrap {
+        circle {
+          stroke-dashoffset: -423.75;
+          transition: all 1s;
+          &.month {
+            stroke: $warning-color;
+          }
+          &.week {
+            stroke: $progress-color;
+          }
+        }
+      }
+    }
+  }
+  &-today {
+    margin: 30px 0 0 0;
+    .info-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .today-info {
+        display: flex;
+        align-items: center;
+        .icon {
+          margin: 0 15px;
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+.home-details {
+  .home-header {
+    display: flex;
+    align-items: center;
+  }
+}
+.info-day {
+  padding: 15px;
+  border: 1px solid $progress-color;
+  border-radius: 10px;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  span {
+    color: $btn-border;
+  }
+  .list-wrap {
+    width: 100%;
+    .tasks-list ul li {
+      margin: 20px 0 0 0;
+    }
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  .date-info {
+    .date {
+      font-size: 20px;
+    }
+    .day {
+      font-size: 14px;
+    }
+  }
+}

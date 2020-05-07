@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "./vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background: $bg-color;
+  color: $text-color;
+}
+@import "./utils";
+
+.container {
+  margin: 20px auto;
+  padding: 0 8px;
+  width: 100%;
+  max-width: 520px;
+  @media screen and(max-width: 768px) {
+    max-width: 700px;
+  }
+  @media screen and(max-width: 480px) {
+    padding: 0 10px;
+  }
+}
+
+@import "./components/components.scss";

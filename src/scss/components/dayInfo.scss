@@ -1,0 +1,86 @@
+.day {
+  &-info {
+    display: flex;
+    justify-content: space-between;
+
+    &--date {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      .week {
+        display: flex;
+        margin: 0 10px;
+        text-align: center;
+        flex-direction: column;
+        font-size: 14px;
+        &-day {
+          padding: 2px;
+          border-bottom: 1px solid $btn-border;
+        }
+      }
+    }
+    .avatar {
+      &-btn {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        .avatar-icon {
+          width: 50px;
+        }
+      }
+      &-img {
+        transition: transform 400ms;
+        svg {
+          width: 25px;
+          height: 25px;
+          fill: $btn-success;
+        }
+        &.active {
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .button-wrap button:nth-child(1) {
+      margin: 0 10px;
+      }
+  }
+  .task-list-wrap {
+    min-height: 70vh;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0 0 0;
+  }
+  .icon-wrap {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    display: flex;
+    background: $bg-color;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: top 500ms;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+    &.visible {
+      top: 0;
+    }
+    img {
+      margin: 5px;
+      padding: 5px;
+      width: 12%;
+      cursor: pointer;
+      border: 1px solid transparent;
+      @media screen and(max-width: 480px){
+          width: 17%;
+      }
+      &:hover {
+        border-bottom: 1px solid $btn-border;
+      }
+    }
+  }
+}

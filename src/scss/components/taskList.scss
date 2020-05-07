@@ -1,0 +1,63 @@
+.tasks-list {
+  ul {
+    list-style-type: none;
+    li {
+      padding: 15px 10px;
+      margin: 15px 0;
+      display: flex;
+      background: rgba($btn-bg, 0.8);
+      border-radius: 10px;
+      align-items: center;
+      .text {
+        flex-grow: 1;
+        margin: 0 0 0 15px;
+        .description {
+          margin: 5px 0 0 0;
+          font-size: 14px;
+          color: $btn-border;
+        }
+      }
+      .time {
+        align-self: flex-start;
+        color: $btn-border;
+      }
+      .btn-del {
+        margin: 0 5px;
+        padding: 5px;
+        align-self: flex-start;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover svg {
+          fill: darken($btn-border, 15%);
+        }
+        svg {
+          width: 10px;
+          height: 10px;
+          fill: $btn-border;
+          transition: fill 300ms;
+        }
+      }
+      .block-button {
+        border-radius: 50%;
+        border: 1px solid $btn-border;
+        width: 35px;
+        height: 35px;
+
+        &.success {
+          background: darken(rgba($btn-success, 0.2), 15%);
+          border: 1px solid $btn-success;
+        }
+        svg {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}
+.empty-list {
+  font-size: 25px;
+  color: $btn-border;
+}

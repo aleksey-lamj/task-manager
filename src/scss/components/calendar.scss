@@ -1,0 +1,95 @@
+table {
+  width: 100%;
+  td,
+  th {
+    width: 71px;
+    height: 61px;
+    text-align: center;
+    transition: background 300ms;
+  }
+  td {
+    border: 1px solid $btn-bg;
+    &.tasks {
+      border: 1px solid rgba($progress-color, .3);
+    }
+    &.current-day {
+      color: $btn-success;
+    }
+    &.darken {
+      font-size: 14px;
+      color: rgba($btn-border, .6);
+      .info img {
+        opacity: .7;
+      }
+      &.tasks {
+        border: 1px solid rgba($progress-color, .2);
+      }
+    }
+    
+      img {
+        width: 40px;
+      }
+  }
+  td:hover {
+    background: $btn-bg;
+    cursor: pointer;
+  }
+}
+.calendar {
+  &-date {
+    display: flex;
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+      color: $btn-border;
+      transition: color 300ms;
+      &:hover {
+        color: lighten($btn-border, 15%);
+      }
+    }
+    
+    .month {
+      text-align: center;
+      flex-grow: 1;
+    }
+  }
+}
+
+.table-wrap {
+  position: relative;
+  height: 85vh;
+  .date-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $bg-color;
+    border-top: 1px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+    li {
+      font-size: 20px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background 300ms;
+      &:hover {
+        background: rgba(lightgrey, 0.4);
+      }
+      &.current {
+        color: $btn-success;
+      }
+    }
+  }
+}

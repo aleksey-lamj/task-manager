@@ -1,0 +1,45 @@
+.block-title {
+  font-size: 30px;
+}
+.block-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: $btn-bg;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: background 300ms;
+  &:hover {
+    background: darken($btn-bg, 2%);
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    fill: $btn-border;
+    transition: fill 300ms;
+  }
+  &.success {
+    background: rgba($btn-success, 0.4);
+    svg {
+      fill: $btn-success;
+    }
+    &:hover {
+      background: rgba(darken($btn-success, 5%), 0.4);
+    }
+  }
+  &.back {
+    background:none;
+    &:hover {
+      background: none;
+      svg {
+        fill: lighten($btn-border, 15%);
+      }
+    }
+  }
+}

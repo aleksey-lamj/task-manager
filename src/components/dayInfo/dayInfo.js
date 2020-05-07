@@ -62,7 +62,6 @@ const DayInfo = ({ date, hideShow }) => {
         <div className={`icon-wrap ${hideIcon && 'visible'}`}>
           {arrIcons.map((el, i) => <img key={'icon' + i}
             onClick={() => {
-              
               addIcon(date.id, el)
               setHideIcon(false)
             }}

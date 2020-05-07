@@ -10,25 +10,38 @@ table {
   td {
     border: 1px solid $btn-bg;
     &.tasks {
-      border: 1px solid rgba($progress-color, .3);
+      border: 1px solid rgba($progress-color, 0.3);
     }
     &.current-day {
       color: $btn-success;
     }
     &.darken {
       font-size: 14px;
-      color: rgba($btn-border, .6);
+      color: rgba($btn-border, 0.6);
       .info img {
-        opacity: .7;
+        opacity: 0.7;
       }
       &.tasks {
-        border: 1px solid rgba($progress-color, .2);
+        border: 1px solid rgba($progress-color, 0.2);
       }
     }
-    
+    img {
+      width: 40px;
+    }
+    @media screen and(max-width: 480px) {
+      width: 60px;
+      height: 60px;
       img {
-        width: 40px;
+        width: 30px;
       }
+    }
+    @media screen and(max-width: 320px) {
+      width: 45px;
+      height: 45px;
+      img {
+        width: 25px;
+      }
+    }
   }
   td:hover {
     background: $btn-bg;
@@ -51,7 +64,7 @@ table {
         color: lighten($btn-border, 15%);
       }
     }
-    
+
     .month {
       text-align: center;
       flex-grow: 1;

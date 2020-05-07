@@ -4,7 +4,7 @@ import Calendar from '../calendar/calendar'
 import HomePage from '../homePage/homePage'
 
 const App = () => {
-  const [showCalendar, setShowCalendar] = useState(false)
+  const [showCalendar, setShowCalendar] = useState(true)
 
   const currentDate = new Date()
   const date = {
